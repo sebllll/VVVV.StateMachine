@@ -1,0 +1,85 @@
+<?xml version='1.0'?>
+<!DOCTYPE qfsmproject SYSTEM 'qfsm.dtd'>
+<qfsmproject version="0.54" author="Qfsm">
+  <machine nummooreout="0" transfontitalic="0" draw_it="1" statefontsize="8" transfont="Helvetica" statefontitalic="0" author="" description="" version="" name="FSM" arrowtype="1" numbits="4" statefontweight="50" statefont="Helvetica" numin="0" transfontsize="8" transfontweight="50" type="2" numout="0" initialstate="0">
+    <outputnames_moore></outputnames_moore>
+    <inputnames></inputnames>
+    <outputnames></outputnames>
+    <itransition ypos="70" endx="260" xpos="200" endy="70"/>
+    <state pencolor="0" exit_actions="" radius="40" description="" finalstate="0" entry_actions="" moore_outputs="" ypos="70" code="0" xpos="300" linewidth="1">idle</state>
+    <state pencolor="0" exit_actions="" radius="40" description="" finalstate="0" entry_actions="" moore_outputs="" ypos="220" code="2" xpos="300" linewidth="1">open menu</state>
+    <state pencolor="0" exit_actions="" radius="40" description="" finalstate="0" entry_actions="" moore_outputs="" ypos="360" code="4" xpos="300" linewidth="1">menu mode</state>
+    <state pencolor="0" exit_actions="" radius="40" description="" finalstate="0" entry_actions="" moore_outputs="" ypos="510" code="3" xpos="300" linewidth="1">open selected  item</state>
+    <state pencolor="0" exit_actions="" radius="40" description="" finalstate="0" entry_actions="" moore_outputs="" ypos="660" code="6" xpos="300" linewidth="1">item mode</state>
+    <state pencolor="0" exit_actions="" radius="40" description="" finalstate="0" entry_actions="" moore_outputs="" ypos="220" code="9" xpos="600" linewidth="1">close menu</state>
+    <state pencolor="0" exit_actions="" radius="40" description="" finalstate="0" entry_actions="" moore_outputs="" ypos="510" code="1" xpos="600" linewidth="1">close item</state>
+    <state pencolor="0" exit_actions="" radius="40" description="" finalstate="0" entry_actions="" moore_outputs="" ypos="220" code="5" xpos="450" linewidth="1">close menu</state>
+    <state pencolor="0" exit_actions="" radius="40" description="" finalstate="0" entry_actions="" moore_outputs="" ypos="580" code="8" xpos="90" linewidth="1">close item</state>
+    <transition c1x="300.0000008444445" c2y="156.6666666666667" c1y="133.3333333333334" description="" straight="1" type="2" ypos="110" endx="300.000002" xpos="300.0000002666667" endy="180.0000000000001" c2x="300.0000014222222">
+      <from>0</from>
+      <to>2</to>
+      <inputs default="0" any="0" invert="0">Pressmenu</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="300.0000015238096" c2y="300.0000000000002" c1y="280.0000000000001" description="" straight="1" type="2" ypos="260" endx="300.000004" xpos="300.0000002857144" endy="320.0000000000002" c2x="300.0000027619047">
+      <from>2</from>
+      <to>4</to>
+      <inputs default="0" any="0" invert="0">menu has opeend</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="415.2982219480138" c2y="319.1169631197755" c1y="348.233926239551" description="" straight="0" type="2" ypos="347.3508893593265" endx="450.000002" xpos="337.9473319220206" endy="259.9999999999999" c2x="452.6491119740069">
+      <from>4</from>
+      <to>5</to>
+      <inputs default="0" any="0" invert="0">do idle</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="300.0000015111111" c2y="446.6666666666669" c1y="423.3333333333334" description="" straight="1" type="2" ypos="400" endx="300.000004" xpos="300.0000002666667" endy="470.0000000000002" c2x="300.0000027555555">
+      <from>4</from>
+      <to>3</to>
+      <inputs default="0" any="0" invert="0">press item</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="300.0000015111111" c2y="596.6666666666669" c1y="573.3333333333334" description="" straight="1" type="2" ypos="550" endx="300.000004" xpos="300.0000002666667" endy="620.0000000000002" c2x="300.0000027555555">
+      <from>3</from>
+      <to>6</to>
+      <inputs default="0" any="0" invert="0">item has opened</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="487.2385762508461" c2y="639.8561808316413" c1y="663.4280904158206" description="" straight="0" type="2" ypos="660" endx="600.000001333333" xpos="340" endy="550" c2x="604.477153835026">
+      <from>6</from>
+      <to>1</to>
+      <inputs default="0" any="0" invert="0">do idle</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="170.0000004444445" c2y="666.6666666666666" c1y="663.3333333333334" description="" straight="0" type="2" ypos="660" endx="90.00000133333327" xpos="260" endy="620" c2x="90.00000088888891">
+      <from>6</from>
+      <to>8</to>
+      <inputs default="0" any="0" invert="0">press item</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="596.0838429086066" c2y="67.569535392365" c1y="81.8404957861834" description="" straight="0" type="2" ypos="180" endx="338.8057000058133" xpos="600.000001333333" endy="60.29857499854671" c2x="523.9447707905433">
+      <from>9</from>
+      <to>0</to>
+      <inputs default="0" any="0" invert="0">menu has closed</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="600.0000007586207" c2y="329.9999999999999" c1y="399.9999999999999" description="" straight="1" type="2" ypos="470" endx="600.000002" xpos="600.000000137931" endy="259.9999999999999" c2x="600.0000013793102">
+      <from>1</from>
+      <to>9</to>
+      <inputs default="0" any="0" invert="0">item has closed</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="451.0940045911713" c2y="111.4586718993394" c1y="130.7293359496697" description="" straight="0" type="2" ypos="180" endx="333.2820117735138" xpos="450.000001" endy="92.18800784900921" c2x="382.1880081823425">
+      <from>5</from>
+      <to>0</to>
+      <inputs default="0" any="0" invert="0">menu has closed</inputs>
+      <outputs></outputs>
+    </transition>
+    <transition c1x="90.00000088888891" c2y="511" c1y="500" description="" straight="0" type="2" ypos="540" endx="260" xpos="90.00000133333327" endy="510" c2x="191.0000004444445">
+      <from>8</from>
+      <to>3</to>
+      <inputs default="0" any="0" invert="0">item has closed</inputs>
+      <outputs></outputs>
+    </transition>
+  </machine>
+</qfsmproject>
